@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.brandonio21.chloromedia.Data.ProviderItem;
@@ -27,7 +28,9 @@ public class ProviderItemAdapter extends RecyclerView.Adapter<ProviderItemAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         TextView poopText = (TextView) holder.view.findViewById(R.id.item_textview);
+        ImageView poopImage = (ImageView) holder.view.findViewById(R.id.item_imageview);
         poopText.setText(this.providerItemDataset.get(position).getName());
+        poopImage.setImageBitmap(this.providerItemDataset.get(position).getPreviewImage(holder.view.getContext()));
     }
 
     @Override

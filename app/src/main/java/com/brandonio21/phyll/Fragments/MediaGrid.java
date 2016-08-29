@@ -49,7 +49,7 @@ public class MediaGrid extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_media_grid, container, false);
 
         this.mediaGridRecyclerView = (RecyclerView) rootView.findViewById(R.id.media_grid_recyclerview);
-        this.layoutManager = new GridLayoutManager(this.getActivity(), 3);
+        this.layoutManager = new GridLayoutManager(this.getActivity(), 2);
 
         this.dataAdapter = new ProviderItemAdapter(this.providerItemDataset);
         this.mediaGridRecyclerView.setAdapter(this.dataAdapter);
